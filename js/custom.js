@@ -31,6 +31,25 @@ $(".owl-carousel").owlCarousel({
     }
 });
 
+function toggleReadMore() {
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (moreText.style.display === "none") {
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+      btnText.style.display = "flex";
+      btnText.style.justifyContent = "center"
+      btnText.style.marginTop ="45px"
+    } else {
+      btnText.innerHTML = "Read less";
+      btnText.style.display = "flex";
+      btnText.style.justifyContent = "center"
+      btnText.style.marginTop ="45px"
+    }
+  }
+  
+
 /** google_map js **/
 
 function myMap() {
@@ -88,4 +107,4 @@ function fadeOutEffect() {
         }
     }, 1500);
 }
-  
+

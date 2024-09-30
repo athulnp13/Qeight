@@ -835,6 +835,9 @@ a:focus {
 .footer_section a {
   color: inherit;
 }
+/* div.services div#more {
+  display: none;
+  } */
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
