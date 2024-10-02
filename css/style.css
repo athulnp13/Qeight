@@ -502,6 +502,15 @@ a:focus {
           align-items: center;
 }
 
+.service_section .services #more .box{
+  display: none;
+}
+
+/* .service_section .services #base{
+  display: inline-block;
+} */
+
+
 .service_section .box .img-box {
   width: 65px;
   height: 65px;
@@ -515,6 +524,7 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
+
 
 .service_section .box .img-box img {
   max-height: 100%;
@@ -564,6 +574,7 @@ a:focus {
   border: 1px solid #0355cc;
   border-radius: 0;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .service_section .btn-box a:hover {
