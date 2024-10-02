@@ -45,7 +45,45 @@ loadMoreBtn.onclick = () =>{
         loadMoreBtn.style.display = 'none'
     }
 }
+document.getElementById("success").style.visibility = "hidden";
+//Listen for submit
+document.querySelector('.contact-form').addEventListener("submit",submitform);
+function submitform(e){
+    e.preventDefault();
 
+    //Get inputs
+    let name = document.querySelector("#tbname").value;
+    let phone = document.querySelector("#tbphone").value;
+    let email = document.querySelector("#tbemail").value;
+    let message = document.querySelector("#tbmessage").value;
+    sendEmail(name,phone,email,message);
+    document.querySelector('.contact-form').reset();
+}
+function sendEmail(name,phone,email,message){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "equiryfromqmed@gmail.com",
+        Password : "qexvadaocwqcyfbc",
+        To : 'athuln10@gmail.com',
+        From : "athulnalupurakkal@gmail.com",
+        Subject : `Enquiry from ${name}`,
+        Body : `Name: ${name}<br/> Phone: ${phone} <br/> Email: ${email}<br/> Message:${message}`
+        }).then((message) => showSuccessMessage());
+}
+// function sendEmail() {
+//     Email.send({
+//         Host: "smtp.gmail.com",
+//         Username: "athuln10@gmail.com",
+//         Password: "53745650.",
+//         To: 'athulnalupurakkal@gmail.com',
+//         From: "athuln@10gmail.com",
+//         Subject: "Sending Email using javascript",
+//         Body: "Well that was easy!!",
+//     })
+//         .then(function (message) {
+//             alert("mail sent successfully")
+//         });
+//}
 /** google_map js **/
 
 // function myMap() {
